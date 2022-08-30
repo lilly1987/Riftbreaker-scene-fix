@@ -76,7 +76,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     //Console.WriteLine(sb);
                     //Console.WriteLine("=== result ===");
 
-                    File.Move(file, file + ".bak", true);
+                    //File.Move(file, file + ".bak", true);
                     File.WriteAllText(file, sb.ToString());
                 }
 
@@ -85,8 +85,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             {
                 Console.WriteLine(e);
             }
-            Console.Write("any key end:");
-            Console.ReadLine();
+            //Console.Write("any key end:");
+            //Console.ReadLine();
         }
     }
 }
