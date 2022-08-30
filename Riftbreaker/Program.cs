@@ -51,6 +51,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     //Console.WriteLine(text);
                     result = text;
 
+                    result = Regex.Replace(result, "\"\"","\"");
+                    result = Regex.Replace(result, "\"\\s+\"", "\n");
+                    result = Regex.Replace(result, "(\\A\\s*\"|\"\\s*\\z)", string.Empty);
                     result = Regex.Replace(result, "entity_count\\s+\"\\d+\"\\s+", string.Empty);
                     result = Regex.Replace(result, "//editor \"index\\(\\d+\\)\"\\s+", string.Empty);
                     //Console.WriteLine("=== result ===");
